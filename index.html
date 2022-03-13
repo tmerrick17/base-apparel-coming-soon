@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/ac8a13df38.js" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="public/css/main.min.css">
+  <title>Base Apparel: New Fashion Store - Coming Soon</title>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">
+      <a href="index.html">
+        <img src="public/images/logo.svg" alt="Base Apparel">
+      </a>
+    </div>
+  </header>
+
+  <!-- Hero image for larger screen size, easier to place when outside of main tag -->
+  <div class="hero-lg">
+    <img src="public/images/hero-desktop.jpg" alt="woman model portrait shot">
+  </div>
+
+  <main>
+
+    <!-- Hero image for smaller screen size -->
+    <div class="hero-sm">
+      <img src="public/images/hero-mobile.jpg" alt="woman model medium shot">
+    </div>
+
+    <section class="announcement" aria-labelledby="coming-soon">
+      <h1 id="Coming-soon" class="announcement__header">
+        <span>We&apos;re</span> 
+        coming soon
+      </h1>
+
+      <p class="announcement__text">
+        Hello fellow shoppers! We're currently building our new fashion store.
+        Add your email below to stay up-to-date with announcements and our launch deals.
+      </p>
+
+      <!-- Email form and button -->
+      <form id="form" class="form">
+        <div class="form-control">
+          <input id="email" type="text" name="EmailAddress" placeholder="Email Address">
+          <i class="fa-solid fa-circle-exclamation fa-2xl"></i>
+          <small class="error-message">error message</small>
+          <button>
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
+        </div>
+      </form>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Challenge by
+      <a class="footer__link" href="https://www.frontendmentor.io?ref=challenge" target="_blank">
+        Frontend Mentor
+      </a>
+      Coded by
+      <a class="footer__link" href="https://github.com/tmerrick17">
+        Trevor Merrick
+      </a>
+    </p>
+  </footer>
+
+</body>
+
+<script src="public/js/email_verif.js"></script>
+</html>

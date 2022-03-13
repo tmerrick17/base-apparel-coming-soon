@@ -1,0 +1,72 @@
+@use '../abstracts' as abst
+    
+main
+    display: flex
+    flex-direction: column
+
+.hero-sm
+    display: flex
+    flex-direction: column
+    margin-bottom: abst.$space-xl
+
+    img
+        object-fit: cover
+        width: 100vw
+
+    @media screen and (min-width: abst.$media-md) 
+        display: none
+
+.hero-lg
+    display: none
+
+    @media screen and (min-width: abst.$media-md) 
+        display: block
+
+
+.announcement
+    display: flex
+    flex-direction: column
+    align-items: center
+
+    @media screen and (min-width: abst.$media-md) 
+        align-items: start
+
+    &__header
+        text-align: center
+        width: min-content
+        letter-spacing: clamp(1rem, 3vw, 2rem)
+        font-size: clamp(4.1rem, 4vw, 6.4rem)
+        font-weight: abst.$font-bold
+        text-transform: uppercase
+        margin-bottom: abst.$space-md
+
+        span
+            font-weight: abst.$font-thin
+            color: abst.$color-secondary
+
+        @media screen and (min-width: abst.$media-md)
+            text-align: left
+            line-height: 7rem
+            padding-left: clamp(6rem, 8vw, 16rem)
+
+        @media screen and (min-width: abst.$media-xl)
+            margin-left: 24rem
+
+    &__text
+        text-align: center
+        padding: 0 4rem
+        min-width: 30ch
+        max-width: 45ch
+        line-height: clamp(2.5rem, 3vh, 3rem)
+        color: abst.$color-secondary
+        opacity: 0.7
+        margin-bottom: 3rem
+
+        @media screen and (min-width: abst.$media-md)
+            text-align: left
+            padding-left: clamp(6rem, 8vw, 16rem)
+            max-width: 55ch
+
+        @media screen and (min-width: abst.$media-xl)
+            margin-left: 24rem
+    

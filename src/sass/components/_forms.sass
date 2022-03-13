@@ -1,0 +1,108 @@
+@use '../abstracts' as abst
+
+form
+
+    @media screen and (min-width: abst.$media-md)
+        padding-left: clamp(6rem, 8vw, 16rem)
+
+    @media screen and (min-width: abst.$media-xl)
+            margin-left: 24rem
+
+    .form-control
+        position: relative
+        display: flex
+        flex-direction: column
+
+        &.error input 
+            border: 2px solid abst.$color-highlight
+
+        input,
+        ::placeholder
+            text-indent: 2rem
+            font-family: abst.$font-primary
+            font-weight: abst.$font-normal
+
+        input,
+        button
+            border-radius: 3rem
+            height: 4.8rem
+            outline: none
+
+            @media screen and (min-width: abst.$media-md)
+                height: 5.5rem
+
+        input
+            display: block
+            border: 1px solid abst.$color-secondary
+            width: 31rem
+            font-size: clamp(abst.$font-md, 1vw, abst.$font-lg)
+            color: abst.$color-primary
+            background: hsl(0, 100%, 100%, 0)
+
+            &:focus
+                border: 2px solid abst.$color-secondary
+
+            @media screen and (min-width: abst.$media-md)
+                width: 36rem
+            
+            @media screen and (min-width: 1200px)
+                width: 44.5rem
+
+        ::placeholder 
+            font-size: abst.$font-sm
+            color: abst.$color-secondary
+            opacity: 0.5
+        
+        .fa-circle-exclamation
+            visibility: hidden
+            position: absolute
+            top: 1.4rem
+            left: 21.5rem
+
+            @media screen and (min-width: abst.$media-md)
+                top: 1.6rem
+                left: 26rem
+
+            @media screen and (min-width: 1200px)
+                left: 31rem
+    
+        // .form-control.error could go here
+
+        button
+            position: absolute
+            left: 24.6rem
+            width: 6.4rem
+            color: white
+            border: 0
+            background: abst.$color-secondary 
+            background: abst.$gradient2
+            font-size: 2rem
+            box-shadow: 0px 24px 50px -7px hsl(1, 60%, 80%)
+
+            &:hover,
+            &:focus
+                background: abst.$gradient3
+                box-shadow: 0px 12px 40px -3px hsl(1, 40%, 50%)
+                cursor: pointer
+
+            @media screen and (min-width: abst.$media-md)
+                left: 29.6rem
+            
+            @media screen and (min-width: 1200px)
+                left: 34.6rem
+                width: 10rem
+
+        .error-message
+            visibility: hidden
+            margin-top: 1rem
+            margin-left: 2.4rem
+            font-size: abst.$font-sm
+            color: abst.$color-highlight
+    // Error toggle of message and exlamation point
+    .form-control.error .error-message
+        visibility: visible
+
+    .form-control.error .fa-circle-exclamation
+        visibility: visible
+        color: abst.$color-highlight
+

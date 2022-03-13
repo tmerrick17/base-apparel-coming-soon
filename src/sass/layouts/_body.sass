@@ -1,0 +1,27 @@
+@use '../abstracts' as abst
+
+/* * Body Styles */
+body 
+    min-height: 100vh
+    display: flex
+    flex-direction: column
+    background: abst.$gradient1
+
+    @media screen and (min-width: abst.$media-md) 
+        display: grid
+        grid-template-columns: 58vw auto
+        grid-template-areas: "header hero" "main hero" "footer hero"
+
+        header
+            grid-area: header
+        
+        .hero-lg
+            grid-area: hero
+            display: flex
+            justify-content: right
+
+            img
+                object-fit: cover
+
+        main
+            grid-area: main

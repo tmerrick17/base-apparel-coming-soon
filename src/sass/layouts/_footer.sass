@@ -1,0 +1,40 @@
+@use '../abstracts' as abst
+
+/* * Footer Styles */
+footer
+    display: flex
+    justify-content: center
+    padding-top: 4rem
+    position: relative
+    margin-top: auto
+    padding-bottom: abst.$space-xs
+
+    p
+        font-size: abst.$font-md
+        text-align: center
+        color: hsl(0, 0%, 0%)
+        width: 25ch
+
+        @media only screen and (min-width: abst.$media-md) // was 600
+            width: 60ch
+
+/* * Footer Link Hover and Focus Styles */
+.footer__link
+    color: abst.$color-primary
+    position: relative
+
+    &:hover, 
+    &:focus
+        color: abst.$color-highlight                                        
+
+    &:hover 
+        text-decoration: none
+
+    &:focus::after
+        content: ""
+        position: absolute
+        left: 0
+        bottom: 0
+        width: 100%
+        height: 2px
+        background: abst.$color-highlight
