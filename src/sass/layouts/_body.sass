@@ -7,6 +7,12 @@ body
     flex-direction: column
     background: abst.$gradient1
 
+    @media screen and (min-width: abst.$media-md)
+        background: url('../../public/images/bg-pattern-desktop.svg') left no-repeat
+        -webkit-background-size: 20% 100%
+        -webkit-background-position: left
+        background-size: 62% 100%
+
     @media screen and (min-width: abst.$media-md) 
         display: grid
         grid-template-columns: 58vw auto
@@ -25,3 +31,4 @@ body
 
         main
             grid-area: main
+            
