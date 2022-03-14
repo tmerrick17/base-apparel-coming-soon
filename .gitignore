@@ -1,2 +1,11 @@
+# GIT Ignore
+
 node_modules
+.vscode
+package-lock.json
+
 src
+
+# Front-End Mentor
+design
+style-guide.md
